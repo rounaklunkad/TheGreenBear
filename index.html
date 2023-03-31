@@ -30,13 +30,6 @@
 
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet" />
-
-    <!-- =======================================================
-    Theme Name: DevFolio
-    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
   </head>
 
   <body id="page-top">
@@ -70,9 +63,11 @@
             <li class="nav-item">
               <a class="nav-link js-scroll active" href="#home">Home</a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link js-scroll" href="#service">Services</a>
+              <a class="nav-link js-scroll" id="servicesLink" href="#service">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll" href="#about">About</a>
@@ -80,9 +75,7 @@
             <!-- <li class="nav-item">
               <a class="nav-link js-scroll" href="#work">Work</a>
             </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link js-scroll" href="#blog">Blog</a>
-            </li> -->
+            
             <li class="nav-item">
               <a class="nav-link js-scroll" href="#contact">Contact</a>
             </li>
@@ -103,7 +96,9 @@
         <div class="table-cell">
           <div class="container">
             <!--<p class="display-6 color-d">Hello, world!</p>-->
-            <h1 class="intro-title mb-4">We are Your Home to</h1>
+            <h1 class="intro-title mb-4">
+              <span class="GradFont"> We are Your Home to</span>
+            </h1>
             <p class="intro-subtitle">
               <span class="text-slider-items"
                 >Trade Better,Learn Further,Earn More,Grow Faster</span
@@ -115,64 +110,7 @@
     </div>
     <!--/ Intro Skew End /-->
 
-    <div
-      class="section-counter paralax-mf bg-image"
-      style="background-image: url(img/counters-bg.jpg)"
-    >
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4 col-lg-4">
-            <div class="counter-box">
-              <div class="counter-ico">
-                <span class="ico-circle"
-                  ><i class="ion-checkmark-round"></i
-                ></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">1000</p>
-                <span class="counter-text">PROFITABLE TRADES COMPLETED</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-lg-4">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ios-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">100</p>
-                <span class="counter-text">STUDENTS TRAINED</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-lg-4">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle">
-                  <i class="ion-ios-calendar-outline"></i
-                ></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">3</p>
-                <span class="counter-text">YEARS LEARNING EXPERIENCE</span>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">36</p>
-                <span class="counter-text">AWARD WON</span>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </div>
-    </div>
+
     <!--/ Section Services Star /-->
     <section id="service" class="services-mf route" style="margin-top: 50px">
       <div class="container">
@@ -196,19 +134,40 @@
               <div class="service-content">
                 <h2 class="s-title">Stock Market Classes</h2>
                 <p class="s-description text-center">
-                  We are offering 7 days of totally dedicated stock market
-                  training, trading, and practicing.
+                  <span>
+                    We are offering 7 days of totally dedicated stock market
+                    training, trading, and practicing.
+                  </span>
+                  <span id="readMore1">
+                    We are the first ones to offer a full course in minimal time
+                    so you can start trading and earning as soon as possible. We
+                    will be running only 1 batch at a time with a limited batch
+                    size so that we can give you our full focus and learning can
+                    be more fun. Unlike traditional classes where you are taught
+                    theory first which you get to practice later on, we focus
+                    directly on the implementation of the theory you need the
+                    most. Training of the batch will be held every week during
+                    market hours, i.e. 9AM to 3:30PM. Every hour of the market
+                    has its own significance that we will teach you which you
+                    can put to practice accordingly, during that time period.
+                  </span>
                   <!-- <i class="fa-solid fa-chart-mixed-up-circle-dollar"></i> -->
                 </p>
                 <center>
-                  <p class="pt-3">
+                  <div class="readmoreBtn">
                     <a
                       class="btn btn-primary btn js-scroll px-4"
                       href="https://wa.me/9111121141?text=Hi, I want to join your 7 Days stock market course."
                       role="button"
                       >Join Now
                     </a>
-                  </p>
+                      <p class="pt-3">
+                        <button class="btn js-scroll px-4" id="readmoreBtn1" onclick="readMore(1)">Read More</button>
+                        <button class="btn js-scroll px-4" id="readlessBtn1" onclick="readLess(1)">Read less</button>
+                      </p>
+                    </p>
+                  </div>
+
                 </center>
               </div>
             </div>
@@ -221,20 +180,48 @@
               <div class="service-content">
                 <h2 class="s-title">Mentorship Program</h2>
                 <p class="s-description text-center">
-                  Our Mentorship program is designed for trainees who know about
-                  the stock market and its intricacies but are struggling to
-                  increase their profits
+                  <span>
+                    Our Mentorship program is designed for trainees who know
+                    about the stock market and its intricacies but are
+                    struggling to increase their profits
+                  </span>
+                  <span id="readMore2">
+                    In short, this is aimed at people who are having
+                    difficulties in implementing their pre-existing knowledge of
+                    trading. During the course of this program, students will be
+                    trading under the guidance of a skilled mentor who will help
+                    them gain confidence, maintain discipline, and lower their
+                    losses. We believe fees shouldn’t be a a barrier for any
+                    trader to move forward in the financial market. So we are
+                    providing this course as an affordable option for traders
+                    who want to increase their skills and profits. You can build
+                    your trading community here, with us and with the help of
+                    each other, you can reach new heights, unlock new profit. We
+                    are providing a complete trading environment during the
+                    mentorship program which will be held in live-market so
+                    every trader can give their 100% in trading without any
+                    distractions. We will also continuously provide our guidance
+                    to each and every student.
+                  </span>
                 </p>
                 <center>
-                  <p class="pt-3">
-                    <a
+                  <div class="readmoreBtn">
+                    <p class="pt-3">
+                      <a
                       class="btn btn-primary btn js-scroll px-4"
                       href="https://wa.me/9111121141?text=Hi, I want to join your Mentorship Programme."
                       role="button"
                       >Join Now
                     </a>
-                  </p>
+                      <p class="pt-3">
+                        <button class="btn js-scroll px-4" id="readmoreBtn2" onclick="readMore(2)">Read More</button>
+                        <button class="btn js-scroll px-4" id="readlessBtn2" onclick="readLess(2)">Read less</button>
+                      </p>
+                    </p>
+                  </div>
+
                 </center>
+
               </div>
             </div>
           </div>
@@ -246,19 +233,40 @@
               <div class="service-content">
                 <h2 class="s-title">Trader's Co-Working</h2>
                 <p class="s-description text-center">
-                  Our co-working space at TGB is one of a kind - designed
-                  exclusively for traders. No matter in what segment you trade,
-                  you are warmly welcomed here.
+                  <span>
+                    Our co-working space at TGB is one of a kind - designed
+                    exclusively for traders. No matter in what segment you
+                    trade, you are warmly welcomed here.</span
+                  >
+                  <span id="readMore3">
+                    With other traders just like you, a whole community is
+                    present to strengthen your trading game. We aim to build a
+                    strong community of traders who work toward their individual
+                    goals while supporting each other and grow organically. If
+                    you are trader eager to grow, this is the second home you
+                    would want to cherish. And since we are your second home, we
+                    have our doors open for you every minute of the day.
+                    Therefore, no time boundation for trading and the best aura
+                    to help you make the best trading decisions!
+                  </span>
                 </p>
+                
                 <center>
-                  <p class="pt-3">
-                    <a
-                      class="btn btn-primary btn js-scroll px-4"
-                      href="https://wa.me/9111121141?text=Hi, I want to be a part of your Co-Working Community."
-                      role="button"
-                      >Join Now
-                    </a>
-                  </p>
+                  <div class="readmoreBtn">
+                    <p class="pt-3">
+                      <a
+                        class="btn btn-primary btn js-scroll px-4"
+                        href="https://wa.me/9111121141?text=Hi, I want to be a part of your Co-Working Community."
+                        role="button"
+                        >Join Now
+                      </a>
+                      <p class="pt-3">
+                        <button class="btn js-scroll px-4" id="readmoreBtn3" onclick="readMore(3)">Read More</button>
+                        <button class="btn js-scroll px-4" id="readlessBtn3" onclick="readLess(3)">Read less</button>
+                      </p>
+                    </p>
+                  </div>
+
                 </center>
               </div>
             </div>
@@ -569,15 +577,15 @@
     </div>
 
     <!--/ Section Blog Star /-->
-    <!-- <section id="blog" class="blog-mf sect-pt4 route">
+    <section id="blog" class="blog-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
               <h3 class="title-a">Blog</h3>
-              <p class="subtitle-a">
+              <!-- <p class="subtitle-a">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              </p>
+              </p> -->
               <div class="line-mf"></div>
             </div>
           </div>
@@ -586,26 +594,24 @@
           <div class="col-md-4">
             <div class="card card-blog">
               <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="img/post-1.jpg" alt="" class="img-fluid"
+                <a href="https://interviewerpr.com/from-engineer-to-successful-trader-daksh-jains-journey-to-finding-his-passion-in-the-world-of-finance/"
+                  ><img src="img/blog1.jpeg" alt="" class="img-fluid"
                 /></a>
               </div>
               <div class="card-body">
-                <div class="card-category-box">
+                <!-- <div class="card-category-box">
                   <div class="card-category">
-                    <h6 class="category">Travel</h6>
+                    <h6 class="category"></h6>
                   </div>
-                </div>
+                </div> -->
                 <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
+                  <a href="https://interviewerpr.com/from-engineer-to-successful-trader-daksh-jains-journey-to-finding-his-passion-in-the-world-of-finance/">From Engineer to Successful Trader:</a>
                 </h3>
                 <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
+                  Daksh Jain’s Journey to Finding His True Calling
                 </p>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <div class="post-author">
                   <a href="#">
                     <img
@@ -619,32 +625,32 @@
                 <div class="post-date">
                   <span class="ion-ios-clock-outline"></span> 10 min
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-blog">
               <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="img/post-2.jpg" alt="" class="img-fluid"
+                <a href="https://english.newstracklive.com/news/daksh-jain-is-a-successful-stock-trader-and-financial-educator-in-india-sc7-nu346-ta346-1268501-1.html"
+                  ><img src="img/blog2.jpeg" alt="" class="img-fluid"
                 /></a>
               </div>
               <div class="card-body">
-                <div class="card-category-box">
+                <!-- <div class="card-category-box">
                   <div class="card-category">
-                    <h6 class="category">Web Design</h6>
+                    <h6 class="category"></h6>
                   </div>
-                </div>
+                </div> -->
                 <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
+                  <a href="https://english.newstracklive.com/news/daksh-jain-is-a-successful-stock-trader-and-financial-educator-in-india-sc7-nu346-ta346-1268501-1.html">Daksh Jain is a successful stock trader and financial educator in India.</a>
                 </h3>
                 <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
+                  Daksh Jain's Road to Self-Discovery.
+                  Daksh Jain initially pursued a career in engineering with the intention of securing a good salary and societal respect. However, just two years into his computer science degree, he realized that the field was not fulfilling his desire for a meaningful and impactful career.
+                  
                 </p>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <div class="post-author">
                   <a href="#">
                     <img
@@ -658,52 +664,94 @@
                 <div class="post-date">
                   <span class="ion-ios-clock-outline"></span> 10 min
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-blog">
               <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="img/post-3.jpg" alt="" class="img-fluid"
+                <a href="https://www.hindustanmetro.com/on-the-way-to-a-dream-the-story-of-a-successful-stock-market-trader-daksh-jain/"
+                  ><img src="img/blog3.jpeg" alt="" class="img-fluid"
                 /></a>
               </div>
               <div class="card-body">
-                <div class="card-category-box">
+                <!-- <div class="card-category-box">
                   <div class="card-category">
-                    <h6 class="category">Web Design</h6>
+                    <h6 class="category"></h6>
                   </div>
-                </div>
+                </div> -->
                 <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
+                  <a href="https://www.hindustanmetro.com/on-the-way-to-a-dream-the-story-of-a-successful-stock-market-trader-daksh-jain/">On the way to a dream- The story of a Successful Stock Market Trader Daksh jain</a>
                 </h3>
                 <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
+                  Today, let us talk about someone whose chosen path was different from the one he wanted and his journey to the right career path.
                 </p>
               </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img
-                      src="img/testimonial-2.jpg"
-                      alt=""
-                      class="avatar rounded-circle"
-                    />
-                    <span class="author">Morgan Freeman</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
-                </div>
-              </div>
+       
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!--/ Section Blog End /-->
+    <div
+    class="section-counter paralax-mf bg-image"
+    style="background-image: url(img/counters-bg.jpg)"
+  >
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-lg-4">
+          <div class="counter-box">
+            <div class="counter-ico">
+              <span class="ico-circle"
+                ><i class="ion-checkmark-round"></i
+              ></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">1000</p>
+              <span class="counter-text">PROFITABLE TRADES COMPLETED</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-people"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">100</p>
+              <span class="counter-text">STUDENTS TRAINED</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle">
+                <i class="ion-ios-calendar-outline"></i
+              ></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">3</p>
+              <span class="counter-text">YEARS LEARNING EXPERIENCE</span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">36</p>
+              <span class="counter-text">AWARD WON</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
     <section id="about" class="about-mf sect-pt4 route">
       <div class="container">
         <div class="row">
@@ -711,7 +759,7 @@
             <div class="box-shadow-full">
               <div class="row">
                 <div class="col-md-6">
-                  <img class="aboutmeImg" src="img/dakshImg1.png" />
+                  <img class="aboutmeImg" src="img/dj_bg.png" />
                 </div>
                 <div class="col-md-6">
                   <div class="about-me pt-4 pt-md-0">
@@ -769,7 +817,7 @@
                       <p class="pt-3">
                         <a
                           class="btn btn-primary btn js-scroll px-4"
-                          href="https://wa.me/9111121141?text=Hi, I my name is ____. I want to be a part of your academy."
+                          href="https://wa.me/9111121141?text=Hi, my name is ____. I want to be a part of your academy."
                           role="button"
                           >Send Message &nbsp;<i class="ion-social-whatsapp"></i
                         ></a>
@@ -805,7 +853,7 @@
                       <ul>
                         <li>
                           <a
-                            href="https://www.facebook.com/dakshj8385?mibextid=LQQJ4d"
+                            href="https://www.facebook.com/thedakshjain?mibextid=LQQJ4d"
                             ><span class="ico-circle"
                               ><i class="ion-social-facebook"></i></span
                           ></a>
@@ -876,5 +924,33 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    <script>
+      function readMore(e) {
+
+        var moreBtn = document.getElementById(`readmoreBtn${e}`);
+        var lessBtn = document.getElementById(`readlessBtn${e}`);
+        var moreText = document.getElementById(`readMore${e}`);
+    
+        moreBtn.style.display = "none";
+        moreText.style.display = "block";
+        lessBtn.style.display = "block";
+    
+      }
+      function readLess(e) {
+        
+        var goToServices = document.getElementById(`servicesLink`);
+        var moreBtn = document.getElementById(`readmoreBtn${e}`);
+        var lessBtn = document.getElementById(`readlessBtn${e}`);
+        var moreText = document.getElementById(`readMore${e}`);
+        
+        goToServices.click()
+        moreBtn.style.display = "block";
+        moreText.style.display = "none";
+        lessBtn.style.display = "none";
+    
+      }
+
+    </script>
+
   </body>
 </html>
