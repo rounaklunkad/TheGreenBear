@@ -1222,7 +1222,37 @@ footer .credits a {
   display: none;
   margin-left: 10px;
 }
+#readMore4 {
+  display: none;
+}
+#readmoreBtn4 {
+  margin-left: 10px;
+}
+#readlessBtn4 {
+  display: none;
+  margin-left: 10px;
+}
 
+#readMore5 {
+  display: none;
+}
+#readmoreBtn5 {
+  margin-left: 10px;
+}
+#readlessBtn5 {
+  display: none;
+  margin-left: 10px;
+}
+#readMore6 {
+  display: none;
+}
+#readmoreBtn6 {
+  margin-left: 10px;
+}
+#readlessBtn6 {
+  display: none;
+  margin-left: 10px;
+}
 @keyframes animated_text {
   0% {
     background-position: 0px 50%;
